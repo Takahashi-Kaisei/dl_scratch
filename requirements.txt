@@ -1,0 +1,12 @@
+datasets
+ipykernel
+jupyter
+matplotlib
+matplotlib_fontja
+numpy
+pandas
+protobuf
+sentencepiece
+tokenizers
+transformers
+wandb
