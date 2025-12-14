@@ -1,0 +1,4 @@
+tokenizer/
+__pycache__/
+checkpoints/
+wandb/

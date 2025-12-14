@@ -1,0 +1,58 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/docker-existing-dockerfile
+{
+// 	"hostRequirements": {
+//     "gpu": "optional"
+//   },
+    "runArgs": [
+        "--gpus",
+        "all",
+		"--rm"
+    ],
+	"name": "Environment for deeplearning",
+	"build": {
+		// // Sets the run context to one level up instead of the .devcontainer folder.
+		// "context": "..",
+		// Update the 'dockerFile' property if you aren't using the standard 'Dockerfile' filename.
+		"dockerfile": "../Dockerfile"
+	},
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// devcontainersが提供する基本的なツール群をインストール
+	"features": {
+		"ghcr.io/devcontainers/features/common-utils:2.5.5": {
+			"installZsh": true,
+			"configureZshAsDefaultShell": true,
+			"upgradePackages": true,
+			"username": "vscode"
+		}
+	},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Uncomment the next line to run commands after the container is created.
+	// "postCreateCommand": "cat /etc/os-release",
+
+	// Configure tool-specific properties.
+	"customizations": {
+      "vscode": {
+        "extensions": [
+          "ms-python.python",
+          "njpwerner.autodocstring",
+          "ms-toolsai.jupyter",
+          "ms-azuretools.vscode-docker",
+	  	  "ms-python.vscode-pylance",
+		  "ms-python.black-formatter",
+		  "usernamehw.errorlens",
+		  "ionutvmi.path-autocomplete",
+		  "KevinRose.vsc-python-indent",
+		  "shardulm94.trailing-spaces"
+        ]
+      }
+    }
+
+	// Uncomment to connect as an existing user other than the container default. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "devcontainer"
+}
+
